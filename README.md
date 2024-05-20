@@ -1,4 +1,4 @@
-# Sprint2-JavaAdvanced - ExperienceIA
+# Sprint2-JavaAdvanced - ExperienceIA 🚀
 
 ![Java](https://img.shields.io/badge/Java-007396?style=flat&logo=java&logoColor=white)
 ![Spring](https://img.shields.io/badge/Spring-6DB33F?style=flat&logo=spring&logoColor=white)
@@ -6,67 +6,81 @@
 ![Hibernate](https://img.shields.io/badge/Hibernate-59666C?style=flat&logo=hibernate&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
 
-# Atualizações da Sprint1 para a Sprint2
+## Atualizações da Sprint1 para a Sprint2 🛠️
 
 Na transição da Sprint1 para a Sprint2, o projeto Java Advanced - ExperienceIA passou por diversas melhorias e expansões significativas. A seguir, detalhamos as principais atualizações e adições que foram implementadas:
 
-## 1. Novos Arquivos Criados
+### 1. Novos Arquivos Criados 📁
 
-### 1.1. Controllers Adicionados
+#### 1.1. Controllers Adicionados
 
 - **AvaliacaoController.java**: Gerencia operações CRUD (Create, Read, Update, Delete) relacionadas às avaliações dos usuários.
 - **LoginController.java**: Responsável pelo gerenciamento das operações de login, permitindo a criação, atualização, consulta e deleção de registros de login.
 - **TrendController.java**: Administra as operações sobre tendências, incluindo a criação, atualização, consulta e deleção de dados sobre tendências de mercado ou usuário.
 - **FeedbackController.java**: Encapsula as operações relacionadas ao feedback dos usuários, permitindo a coleta e gestão de opiniões e avaliações fornecidas pelos usuários.
 
-### 1.2. DTOs Adicionados
+#### 1.2. DTOs Adicionados
 
 - **AvaliacaoDto.java**: Data Transfer Object para transferir dados relacionados às avaliações entre as camadas da aplicação.
 - **LoginDto.java**: Data Transfer Object que facilita a transferência de dados de login entre as camadas do sistema.
 
-### 1.3. Entidades Adicionadas
+#### 1.3. Entidades Adicionadas
 
 - **Avaliacao.java**: Representa a entidade de avaliação, incluindo atributos como nota, feedback e cliente.
 - **Login.java**: Define a entidade de login com atributos como ID, email e senha.
 - **Trend.java**: Entidade que representa uma tendência, contendo informações como tópico, frequência e sentimentos associados.
 - **Feedback.java**: Entidade que captura feedbacks dos usuários, incluindo descrição, data de criação e sentimento.
 
-### 1.4. Repositories Adicionados
+#### 1.4. Repositories Adicionados
 
 - **AvaliacaoRepository.java**: Repositório para realizar operações CRUD na base de dados relacionadas às avaliações.
 - **LoginRepository.java**: Repositório para gerenciamento dos dados de login no banco de dados.
 - **TrendRepository.java**: Repositório que facilita a interação com a base de dados para operações relacionadas às tendências.
 - **FeedbackRepository.java**: Repositório dedicado à manipulação dos dados de feedback na base de dados.
 
-### 1.5. Services Adicionados
+#### 1.5. Services Adicionados
 
 - **AvaliacaoService.java**: Serviço que contém a lógica de negócio para gerenciar avaliações, garantindo a aplicação das regras de negócio adequadas.
 - **LoginService.java**: Serviço que encapsula a lógica de negócio relacionada aos logins, incluindo autenticação e gestão de credenciais.
 - **TrendService.java**: Serviço responsável por aplicar as regras de negócio no gerenciamento de tendências.
 - **FeedbackService.java**: Serviço que gerencia a lógica de negócio para a coleta e processamento de feedbacks dos usuários.
 
-## 2. Atualizações nos Arquivos Existentes
+### 2. Atualizações nos Arquivos Existentes 📝
 
-### 2.1. ClienteService.java
+#### 2.1. ClienteService.java
 
 - Adição do método **atualizarParcialmente**, que permite atualizações parciais de um cliente utilizando reflexão para modificar dinamicamente os campos especificados.
 
-### 2.2. ClienteController.java
+#### 2.2. ClienteController.java
 
 - Inclusão de novos métodos HTTP:
   - **PATCH**: Permite atualizações parciais nos dados dos clientes.
   - **OPTIONS**: Verifica os métodos HTTP disponíveis para um recurso específico.
   - **HEAD**: Verifica a existência de um recurso sem retornar o corpo da resposta.
 
-### 2.3. Cliente.java
+#### 2.3. Cliente.java
 
 - Limpeza do código com a remoção de linhas em branco desnecessárias, mantendo a consistência e legibilidade do código.
 
-## Conclusão
+### 3. Inclusão de Métodos HTTP em Todos os Endpoints 🌐
+
+A Sprint2 trouxe uma implementação essencial para o aprimoramento dos endpoints do projeto Java Advanced - ExperienceIA, ao adicionar suporte para os métodos HTTP HEAD, PATCH e OPTIONS. Essa adição não apenas aumentou a flexibilidade e a funcionalidade dos nossos endpoints, mas também melhorou significativamente a capacidade de interação e a eficiência na comunicação com o servidor. Abaixo, detalhamos a importância e os benefícios de cada um desses métodos:
+
+- **HEAD**: Este método é crucial para verificar a existência de um recurso sem a necessidade de transferir o corpo completo da resposta. Isso é particularmente útil em cenários onde apenas a validação de um recurso é necessária, economizando largura de banda e reduzindo a latência. Por exemplo, um cliente pode usar o método HEAD para verificar se uma avaliação específica existe antes de tentar recuperá-la com um GET.
+
+- **PATCH**: A introdução do método PATCH permite que atualizações parciais sejam feitas nos recursos. Diferente do PUT, que exige a substituição completa do recurso, o PATCH aplica apenas as modificações necessárias, tornando as operações de atualização mais eficientes e menos propensas a erros. Isso é extremamente útil quando apenas alguns campos de um recurso precisam ser atualizados, como alterar o feedback de uma avaliação ou modificar o endereço de e-mail de um usuário.
+
+- **OPTIONS**: O método OPTIONS é fundamental para a descoberta de funcionalidades dos endpoints. Ele permite que clientes consultem quais métodos HTTP são suportados por um recurso específico, ajudando a construir aplicativos mais dinâmicos e adaptáveis. Isso é particularmente útil em APIs RESTful, onde os clientes podem precisar ajustar suas operações com base nos métodos disponíveis.
+
+Essas adições demonstram um avanço significativo na maturidade e na sofisticação do nosso projeto. Ao incorporar esses métodos, melhoramos a robustez e a capacidade de nossos endpoints, proporcionando uma base sólida para futuras expansões e garantindo que nosso sistema possa atender de maneira mais eficaz às necessidades dos usuários e às exigências do mercado.
+
+Além disso, a inclusão desses métodos reforça nosso compromisso com a construção de uma API RESTful completa e aderente aos padrões da indústria, facilitando a integração com outras aplicações e serviços, e assegurando que nosso sistema seja preparado para lidar com uma ampla variedade de cenários de uso.
+
+## Conclusão ✅
 
 As atualizações da Sprint2 expandiram significativamente o escopo e a funcionalidade do projeto, introduzindo novos componentes para gerenciar avaliações, logins, tendências e feedbacks. Esses novos elementos não só aumentam a capacidade do sistema de lidar com diferentes tipos de dados e operações, mas também melhoram a flexibilidade e a eficiência do gerenciamento de informações. As melhorias no gerenciamento de clientes, com a adição de métodos de atualização parcial e verificação de métodos disponíveis, demonstram um avanço na maturidade e sofisticação do projeto, tornando-o mais robusto e preparado para atender às necessidades dos usuários e do mercado.
 
-## Equipe de Desenvolvimento
+## Equipe de Desenvolvimento 👨‍💻👩‍💻
 
 - **Gabriel Jesus** - *Entidades e JPA/Hibernate*
   - Implementação das classes de entidade
@@ -88,15 +102,15 @@ As atualizações da Sprint2 expandiram significativamente o escopo e a funciona
   - Desenvolvimento do vídeo de apresentação do projeto
   - Elaboração e configuração dos slides e demais recursos visuais
 
-## Vídeos
+## Vídeos 🎥
 
 ### Vídeo de Apresentação da Ideia Principal
-[![Vídeo de Apresentação](http://img.youtube.com/vi/rii3foLBHkw/0.jpg)](https://youtu.be/rii3foLBHkw "Vídeo de Apresentação da Ideia Principal - Clique e Assista!")
+[![Vídeo de Apresentação](http://img.youtube.com/vi/JphloDACgY8/0.jpg)](https://www.youtube.com/watch?v=JphloDACgY8 "Vídeo de Apresentação da Ideia Principal - Clique e Assista!")
 
 ### Demonstração dos Endpoints
 [![Demonstração dos Endpoints](http://img.youtube.com/vi/Fm6A2inDUq4/0.jpg)](https://youtu.be/Fm6A2inDUq4 "Demonstração dos Endpoints - Clique e Assista!")
 
-## Como Rodar a Aplicação
+## Como Rodar a Aplicação 💻
 
 ### Pré-requisitos
 
@@ -136,15 +150,15 @@ Antes de executar a aplicação, certifique-se de que o seguinte software está 
    - Clique com o botão direito sobre ela e selecione "Run As" > "Java Application".
    - Eclipse irá compilar e executar a aplicação. O servidor embutido será iniciado e a aplicação estará disponível em `localhost:8080`.
 
-## Acessando a Aplicação
+## Acessando a Aplicação 🌐
 
 Após iniciar a aplicação, você pode acessar `localhost:8080` em qualquer navegador web para interagir com a interface da aplicação ou usar clientes de API como Postman para acessar os endpoints RESTful conforme documentados.
 
-## Documentação da API
+## Documentação da API 📚
 
 ### Endpoints Disponíveis
 
-## Endpoints de Clientes
+#### Endpoints de Clientes
 - **Listar Todos os Clientes**
   - `GET /usuarios`
   - **Descrição:** Retorna uma lista de todos os clientes.
@@ -217,7 +231,7 @@ Após iniciar a aplicação, você pode acessar `localhost:8080` em qualquer nav
   - **Parâmetros de URL:** `id` - ID do cliente.
   - **URL de Requisição:** `localhost:8080/usuarios/{id}`
 
-## Endpoints de Avaliações
+#### Endpoints de Avaliações
 - **Listar Todas as Avaliações**
   - `GET /avaliacoes`
   - **Descrição:** Retorna uma lista de todas as avaliações.
@@ -260,7 +274,7 @@ Após iniciar a aplicação, você pode acessar `localhost:8080` em qualquer nav
   - **Parâmetros de URL:** `id` - ID da avaliação.
   - **URL de Requisição:** `localhost:8080/resultado/{id}`
 
-## Endpoints de Logins
+#### Endpoints de Logins
 - **Listar Todos os Logins**
   - `GET /logins`
   - **Descrição:** Retorna uma lista de todos os logins.
@@ -303,7 +317,7 @@ Após iniciar a aplicação, você pode acessar `localhost:8080` em qualquer nav
   - **Parâmetros de URL:** `id` - ID do login.
   - **URL de Requisição:** `localhost:8080/logins/{id}`
 
-## Endpoints de Tendências
+#### Endpoints de Tendências
 - **Listar Todas as Tendências**
   - `GET /tendencias`
   - **Descrição:** Retorna uma lista de todas as tendências.
@@ -334,7 +348,7 @@ Após iniciar a aplicação, você pode acessar `localhost:8080` em qualquer nav
     ```json
     {
       "topico": "Tendência 1 Atualizada",
-      "frequencia": 120,
+      "frequência": 120,
       "sentimentoPositivo": 85.0,
       "sentimentoNeutro": 10.0,
       "sentimentoNegativo": 5.0,
@@ -356,7 +370,7 @@ Após iniciar a aplicação, você pode acessar `localhost:8080` em qualquer nav
   - **Parâmetros de URL:** `id` - ID da tendência.
   - **URL de Requisição:** `localhost:8080/trends/{id}`
  
- ## Endpoints de Feedback
+#### Endpoints de Feedback
 - **Listar Todos os Feedbacks**
   - `GET /feedbacks`
   - **Descrição:** Retorna uma lista de todos os feedbacks.
@@ -401,7 +415,7 @@ Após iniciar a aplicação, você pode acessar `localhost:8080` em qualquer nav
   - **Parâmetros de URL:** `id` - ID do feedback.
   - **URL de Requisição:** `localhost:8080/feedbacks/{id}`
 
-## Cronograma de Desenvolvimento
+## Cronograma de Desenvolvimento 🗓️
 
 | Atividade                               | Responsável       |  Data de Conclusão  |
 |-----------------------------------------|-------------------|---------------------|
@@ -411,7 +425,7 @@ Após iniciar a aplicação, você pode acessar `localhost:8080` em qualquer nav
 | Criação do Vídeo de Testes              | Gabriel Henrique  | 15/05/2024          |
 | Criação do Vídeo de Apresentação        | Pedro Ferrari     | 18/05/2024          |
 
-## Diagramas
+## Diagramas 📊
 
 ### Diagrama de Classes
 ![Diagrama de Classes](https://raw.githubusercontent.com/bruno1098/Sprint1-JavaAdvanced/main/Images/DiagramaClasses.png)
