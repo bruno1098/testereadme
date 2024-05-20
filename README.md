@@ -221,7 +221,7 @@ Após iniciar a aplicação, você pode acessar `localhost:8080` em qualquer nav
 - **Listar Todas as Avaliações**
   - `GET /avaliacoes`
   - **Descrição:** Retorna uma lista de todas as avaliações.
-  - **URL de Requisição:** `localhost:8080/avaliacoes`
+  - **URL de Requisição:** `localhost:8080/resultado`
 
 - **Criar Avaliação**
   - `POST /avaliacoes`
@@ -231,15 +231,12 @@ Após iniciar a aplicação, você pode acessar `localhost:8080` em qualquer nav
     {
       "avaliacaoNota": 10,
       "avaliacaoFeedback": "Excelente serviço",
-      "cliente": {
-        "idCliente": 1
-      }
     }
     ```
-  - **URL de Requisição:** `localhost:8080/avaliacoes`
+  - **URL de Requisição:** `localhost:8080/resultado`
 
 - **Atualizar Avaliação**
-  - `PUT /avaliacoes/{id}`
+  - `PUT /resultado/{id}`
   - **Descrição:** Atualiza os dados de uma avaliação específica.
   - **Parâmetros de URL:** `id` - ID da avaliação a ser atualizada.
   - **Corpo da Requisição:**
@@ -247,12 +244,9 @@ Após iniciar a aplicação, você pode acessar `localhost:8080` em qualquer nav
     {
       "avaliacaoNota": 9,
       "avaliacaoFeedback": "Bom serviço",
-      "cliente": {
-        "idCliente": 1
-      }
     }
     ```
-  - **URL de Requisição:** `localhost:8080/avaliacoes/{id}`
+  - **URL de Requisição:** `localhost:8080/resultado/{id}`
 
 - **Deletar Avaliação**
   - `DELETE /avaliacoes/{id}`
@@ -261,10 +255,10 @@ Após iniciar a aplicação, você pode acessar `localhost:8080` em qualquer nav
   - **URL de Requisição:** `localhost:8080/avaliacoes/{id}`
 
 - **Consultar Avaliação por ID**
-  - `GET /avaliacoes/{id}`
+  - `GET /resultado/{id}`
   - **Descrição:** Retorna os detalhes de uma avaliação específica.
   - **Parâmetros de URL:** `id` - ID da avaliação.
-  - **URL de Requisição:** `localhost:8080/avaliacoes/{id}`
+  - **URL de Requisição:** `localhost:8080/resultado/{id}`
 
 ## Endpoints de Logins
 - **Listar Todos os Logins**
@@ -316,7 +310,7 @@ Após iniciar a aplicação, você pode acessar `localhost:8080` em qualquer nav
   - **URL de Requisição:** `localhost:8080/tendencias`
 
 - **Criar Tendência**
-  - `POST /tendencias`
+  - `POST /trends`
   - **Descrição:** Adiciona uma nova tendência.
   - **Corpo da Requisição:**
     ```json
@@ -330,10 +324,10 @@ Após iniciar a aplicação, você pode acessar `localhost:8080` em qualquer nav
       "dataFim": "2024-01-31"
     }
     ```
-  - **URL de Requisição:** `localhost:8080/tendencias`
+  - **URL de Requisição:** `localhost:8080/trends`
 
 - **Atualizar Tendência**
-  - `PUT /tendencias/{id}`
+  - `PUT /trends/{id}`
   - **Descrição:** Atualiza os dados de uma tendência específica.
   - **Parâmetros de URL:** `id` - ID da tendência a ser atualizada.
   - **Corpo da Requisição:**
@@ -348,19 +342,19 @@ Após iniciar a aplicação, você pode acessar `localhost:8080` em qualquer nav
       "dataFim": "2024-01-31"
     }
     ```
-  - **URL de Requisição:** `localhost:8080/tendencias/{id}`
+  - **URL de Requisição:** `localhost:8080/trends/{id}`
 
 - **Deletar Tendência**
   - `DELETE /tendencias/{id}`
   - **Descrição:** Remove uma tendência com base no ID fornecido.
   - **Parâmetros de URL:** `id` - ID da tendência a ser removida.
-  - **URL de Requisição:** `localhost:8080/tendencias/{id}`
+  - **URL de Requisição:** `localhost:8080/trends/{id}`
 
 - **Consultar Tendência por ID**
   - `GET /tendencias/{id}`
   - **Descrição:** Retorna os detalhes de uma tendência específica.
   - **Parâmetros de URL:** `id` - ID da tendência.
-  - **URL de Requisição:** `localhost:8080/tendencias/{id}`
+  - **URL de Requisição:** `localhost:8080/trends/{id}`
  
  ## Endpoints de Feedback
 - **Listar Todos os Feedbacks**
@@ -373,8 +367,7 @@ Após iniciar a aplicação, você pode acessar `localhost:8080` em qualquer nav
   - **Descrição:** Adiciona um novo feedback.
   - **Corpo da Requisição:**
     ```json
-    {
-     
+    { 
       "descricao": "Ótimo atendimento",
       "dataCriacao": "2024-01-01",
       "sentimento": "positivo"
@@ -388,8 +381,7 @@ Após iniciar a aplicação, você pode acessar `localhost:8080` em qualquer nav
   - **Parâmetros de URL:** `id` - ID do feedback a ser atualizado.
   - **Corpo da Requisição:**
     ```json
-    {
-      
+    { 
       "descricao": "Atendimento bom",
       "dataCriacao": "2024-01-01",
       "sentimento": "neutro"
@@ -413,11 +405,11 @@ Após iniciar a aplicação, você pode acessar `localhost:8080` em qualquer nav
 
 | Atividade                               | Responsável       |  Data de Conclusão  |
 |-----------------------------------------|-------------------|---------------------|
-| Implementação das Classes de Entidade   | Gabriel Jesus     | 13/04/2024          |
-| Criação dos Endpoints RESTful           | Rafael Lino       | 14/04/2024          |
-| Configuração de Artefatos               | Bruno Antunes     | 15/04/2024          |
-| Criação do Vídeo de Testes              | Gabriel Henrique  | 15/04/2024          |
-| Criação do Vídeo de Apresentação        | Pedro Ferrari     | 12/05/2024          |
+| Implementação das Classes de Entidade   | Gabriel Jesus     | 19/05/2024          |
+| Criação dos Endpoints RESTful           | Rafael Lino       | 17/05/2024          |
+| Configuração de Artefatos               | Bruno Antunes     | 20/05/2024          |
+| Criação do Vídeo de Testes              | Gabriel Henrique  | 15/05/2024          |
+| Criação do Vídeo de Apresentação        | Pedro Ferrari     | 18/05/2024          |
 
 ## Diagramas
 
