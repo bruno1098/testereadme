@@ -14,7 +14,7 @@ Na transição da Sprint1 para a Sprint2, o projeto Java Advanced - ExperienceIA
 
 #### 1.1. Controllers Adicionados
 
-- **AvaliacaoController.java**: Gerencia operações CRUD (Create, Read, Update, Delete) relacionadas às avaliações dos usuários.
+- **AvaliacaoController.java**: Gerencia operações CRUD relacionadas às avaliações dos usuários.
 - **LoginController.java**: Responsável pelo gerenciamento das operações de login, permitindo a criação, atualização, consulta e deleção de registros de login.
 - **TrendController.java**: Administra as operações sobre tendências, incluindo a criação, atualização, consulta e deleção de dados sobre tendências de mercado ou usuário.
 - **FeedbackController.java**: Encapsula as operações relacionadas ao feedback dos usuários, permitindo a coleta e gestão de opiniões e avaliações fornecidas pelos usuários.
